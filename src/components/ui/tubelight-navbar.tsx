@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { Link, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -11,6 +11,7 @@ interface NavItem {
   name: string
   url: string
   icon: LucideIcon
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void
 }
 
 interface NavBarProps {
@@ -21,7 +22,6 @@ interface NavBarProps {
 export function NavBar({ items, className }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name)
   const [isMobile, setIsMobile] = useState(false)
-  const location = useLocation()
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,11 +32,6 @@ export function NavBar({ items, className }: NavBarProps) {
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
   }, [])
-
-  useEffect(() => {
-    const currentItem = items.find(item => item.url === location.hash) || items[0]
-    setActiveTab(currentItem.name)
-  }, [location.hash, items])
 
   return (
     <div
@@ -51,10 +46,13 @@ export function NavBar({ items, className }: NavBarProps) {
           const isActive = activeTab === item.name
 
           return (
-            <Link
+            <a
               key={item.name}
-              to={item.url}
-              onClick={() => setActiveTab(item.name)}
+              href={item.url}
+              onClick={(e) => {
+                setActiveTab(item.name)
+                item.onClick?.(e)
+              }}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-white/80 hover:text-primary",
@@ -83,7 +81,7 @@ export function NavBar({ items, className }: NavBarProps) {
                   </div>
                 </motion.div>
               )}
-            </Link>
+            </a>
           )
         })}
       </div>
