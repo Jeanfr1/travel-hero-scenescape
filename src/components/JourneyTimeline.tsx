@@ -191,7 +191,7 @@ const JourneyTimeline = ({ className }: { className?: string }) => {
         </div>
 
         <div
-          className={cn("w-full bg-white font-sans md:px-10", className)}
+          className={cn("w-full bg-white font-sans md:px-10 relative", className)}
           ref={containerRef}
         >
           <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
