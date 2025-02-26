@@ -20,21 +20,29 @@ function Footer() {
             <a href="#contact" className="text-gray-600 hover:text-primary">Contato</a>
           </nav>
           <div className="mb-8 flex space-x-4">
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Facebook className="h-4 w-4" />
-              <span className="sr-only">Facebook</span>
+            <Button variant="outline" size="icon" className="rounded-full" asChild>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Facebook className="h-4 w-4" />
+                <span className="sr-only">Facebook</span>
+              </a>
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Twitter className="h-4 w-4" />
-              <span className="sr-only">Twitter</span>
+            <Button variant="outline" size="icon" className="rounded-full" asChild>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-4 w-4" />
+                <span className="sr-only">Twitter</span>
+              </a>
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Instagram className="h-4 w-4" />
-              <span className="sr-only">Instagram</span>
+            <Button variant="outline" size="icon" className="rounded-full" asChild>
+              <a href="https://www.instagram.com/alaisviaja?igsh=MXRzeTNiOGhuNnprOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                <Instagram className="h-4 w-4" />
+                <span className="sr-only">Instagram</span>
+              </a>
             </Button>
-            <Button variant="outline" size="icon" className="rounded-full">
-              <Linkedin className="h-4 w-4" />
-              <span className="sr-only">LinkedIn</span>
+            <Button variant="outline" size="icon" className="rounded-full" asChild>
+              <a href="https://www.linkedin.com/in/laispedrodepuiz/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-4 w-4" />
+                <span className="sr-only">LinkedIn</span>
+              </a>
             </Button>
           </div>
           <div className="mb-8 w-full max-w-md">
