@@ -1,11 +1,8 @@
 <div align="center">
+  <img src="public/images/gallery/trip-1.jpg" alt="Travel Hero SceneScape" width="800"/>
   <h1>✈️ Travel Hero SceneScape</h1>
   <p><strong>Uma experiência imersiva de viagem com animações fluidas e design moderno</strong></p>
 </div>
-
-> **Nota:** Para adicionar uma imagem de banner ao README, capture uma screenshot da seção hero do site e salve-a como `public/images/readme-banner.png`. Depois, descomente a linha de imagem abaixo:
->
-> `<!-- <img src="public/images/readme-banner.png" alt="Travel Hero SceneScape" width="800"/> -->`
 
 <div align="center">
 
@@ -22,8 +19,7 @@
 Travel Hero SceneScape é um site moderno de agência de viagens que combina design elegante com animações fluidas para criar uma experiência de usuário imersiva. Desenvolvido com as mais recentes tecnologias web, o projeto demonstra implementações avançadas de React, TypeScript e animações interativas.
 
 <div align="center">
-  <!-- Adicione uma screenshot do seu site aqui -->
-  <p><em>Capture uma screenshot da página "Guias e Recursos" ou outra seção interessante do site e salve como "public/images/readme-showcase.png"</em></p>
+  <img src="public/images/gallery/trip-6.jpg" alt="Showcase" width="800"/>
 </div>
 
 ## ✨ Características
