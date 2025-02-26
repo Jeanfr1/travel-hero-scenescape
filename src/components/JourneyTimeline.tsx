@@ -1,4 +1,3 @@
-
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
@@ -16,12 +15,12 @@ const journeyData = [
           <img
             src="https://images.unsplash.com/photo-1534313314376-a72289b6181e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
             alt="Neuschwanstein Castle"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
+            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
           />
           <img
             src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
             alt="Füssen Town"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
+            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
           />
         </div>
       </div>
@@ -36,22 +35,36 @@ const journeyData = [
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Reception | October 2024 - 1 month
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1513735492246-483525079686?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Lisbon"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1513735492246-483525079686?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Lisbon Streets"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1585208798174-6cedd86e019a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Lisbon Tram"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Florianópolis, Brazil</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Marketing & Kitchen Assistant | February 2024 - 3 months
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1625433669678-99c6bf547f65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Florianópolis"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1625433669678-99c6bf547f65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Florianópolis Beach"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1617974623767-da3b7e888041?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Florianópolis City"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
       </div>
     ),
@@ -65,77 +78,126 @@ const journeyData = [
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Reception | December 2023 - 2 weeks
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1559604185-f46689c0f834?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="La Paz"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1559604185-f46689c0f834?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="La Paz City"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1531993584963-854d3d2d6b30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="La Paz Mountains"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Cusco, Peru</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Bartender | October 2023 - 1 month
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Cusco"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Cusco Plaza"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Machu Picchu"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Máncora, Peru</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Party Promoter | September 2023 - 3 weeks
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1603649293417-89e0504286cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Mancora Beach"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1603649293417-89e0504286cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Mancora Beach"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1597904606214-0d9033890b92?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Mancora Sunset"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Lima, Peru</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Marketing & Party Promoter | August 2023 - 1 month
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Lima"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Lima City"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1577587230708-187fdbef4d91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Lima Coast"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Cartagena, Colombia</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Housekeeping & Reception | May 2023 - 1 month
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1583531352515-8884af319dc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Cartagena"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1583531352515-8884af319dc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Cartagena Streets"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1626897843877-8b4fcd211994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Cartagena Beach"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Santa Marta, Colombia</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Breakfast Assistant | April 2023 - 1 month
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1586094285164-3577206a9c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Santa Marta"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1586094285164-3577206a9c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Santa Marta Beach"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Santa Marta Town"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Bogotá, Colombia</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
             Reception | February 2023 - 2 months
           </p>
-          <img
-            src="https://images.unsplash.com/photo-1628082878598-ed6a5d03c57b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Bogota"
-            className="rounded-lg object-cover h-44 w-full shadow-lg"
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.unsplash.com/photo-1628082878598-ed6a5d03c57b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Bogota City"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1630364227876-978c8586ee5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Bogota Streets"
+              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+          </div>
         </div>
       </div>
     ),
@@ -148,11 +210,18 @@ const journeyData = [
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
           Reception, Social Media & Party Promoter | May 2022 - 1 month
         </p>
-        <img
-          src="https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-          alt="Curitiba"
-          className="rounded-lg object-cover h-44 w-full shadow-lg"
-        />
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src="https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="Curitiba City"
+            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1624316651062-cc6c30d670cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            alt="Curitiba Gardens"
+            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+          />
+        </div>
       </div>
     ),
   },
