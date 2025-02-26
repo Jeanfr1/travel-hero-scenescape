@@ -40,10 +40,10 @@ const ParallaxGallery = ({ className }: { className?: string }) => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-up">
-            Moments from Our Trips
+            Momentos de Nossas Viagens
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto animate-fade-up">
-            Explore breathtaking landscapes and unforgettable destinations through our lens.
+            Explore paisagens deslumbrantes e destinos inesquecíveis através de nossas lentes.
           </p>
         </div>
         

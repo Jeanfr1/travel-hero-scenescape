@@ -7,9 +7,9 @@ const journeyData = [
     title: "2025",
     content: (
       <div>
-        <h4 className="text-xl font-semibold mb-2 text-primary">Füssen, Germany</h4>
+        <h4 className="text-xl font-semibold mb-2 text-primary">Füssen, Alemanha</h4>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-          Tourist Guide & Reception | January 2025 - 1 month
+          Guia Turístico & Recepção | Janeiro 2025 - 1 mês
         </p>
         <div className="grid grid-cols-2 gap-4">
           <img
@@ -31,9 +31,9 @@ const journeyData = [
     content: (
       <div className="space-y-8">
         <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Lisbon, Portugal</h4>
+          <h4 className="text-xl font-semibold mb-2 text-primary">Lisboa, Portugal</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Reception | October 2024 - 1 month
+            Recepção | Outubro 2024 - 1 mês
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -49,9 +49,9 @@ const journeyData = [
           </div>
         </div>
         <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Florianópolis, Brazil</h4>
+          <h4 className="text-xl font-semibold mb-2 text-primary">Florianópolis, Brasil</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Marketing & Kitchen Assistant | February 2024 - 3 months
+            Marketing & Auxiliar de Cozinha | Fevereiro 2024 - 3 meses
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -74,9 +74,9 @@ const journeyData = [
     content: (
       <div className="space-y-8">
         <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">La Paz, Bolivia</h4>
+          <h4 className="text-xl font-semibold mb-2 text-primary">La Paz, Bolívia</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Reception | December 2023 - 2 weeks
+            Recepção | Dezembro 2023 - 2 semanas
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -94,7 +94,7 @@ const journeyData = [
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Cusco, Peru</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Bartender | October 2023 - 1 month
+            Bartender | Outubro 2023 - 1 mês
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -112,7 +112,7 @@ const journeyData = [
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Máncora, Peru</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Party Promoter | September 2023 - 3 weeks
+            Promotor de Eventos | Setembro 2023 - 3 semanas
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -130,7 +130,7 @@ const journeyData = [
         <div>
           <h4 className="text-xl font-semibold mb-2 text-primary">Lima, Peru</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Marketing & Party Promoter | August 2023 - 1 month
+            Marketing & Promotor de Eventos | Agosto 2023 - 1 mês
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -146,9 +146,9 @@ const journeyData = [
           </div>
         </div>
         <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Cartagena, Colombia</h4>
+          <h4 className="text-xl font-semibold mb-2 text-primary">Cartagena, Colômbia</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Housekeeping & Reception | May 2023 - 1 month
+            Serviços Gerais & Recepção | Maio 2023 - 1 mês
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -164,9 +164,9 @@ const journeyData = [
           </div>
         </div>
         <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Santa Marta, Colombia</h4>
+          <h4 className="text-xl font-semibold mb-2 text-primary">Santa Marta, Colômbia</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Breakfast Assistant | April 2023 - 1 month
+            Auxiliar de Café da Manhã | Abril 2023 - 1 mês
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -182,9 +182,9 @@ const journeyData = [
           </div>
         </div>
         <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Bogotá, Colombia</h4>
+          <h4 className="text-xl font-semibold mb-2 text-primary">Bogotá, Colômbia</h4>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Reception | February 2023 - 2 months
+            Recepção | Fevereiro 2023 - 2 meses
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -206,9 +206,9 @@ const journeyData = [
     title: "2022",
     content: (
       <div>
-        <h4 className="text-xl font-semibold mb-2 text-primary">Curitiba, Brazil</h4>
+        <h4 className="text-xl font-semibold mb-2 text-primary">Curitiba, Brasil</h4>
         <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-          Reception, Social Media & Party Promoter | May 2022 - 1 month
+          Recepção, Mídias Sociais & Promotor de Eventos | Maio 2022 - 1 mês
         </p>
         <div className="grid grid-cols-2 gap-4">
           <img
@@ -252,10 +252,10 @@ const JourneyTimeline = ({ className }: { className?: string }) => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-up">
-            My Journey Around the World
+            Minha Jornada Pelo Mundo
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto animate-fade-up">
-            Exploring the world one hostel at a time - A chronicle of my adventures and experiences working in hostels across the globe.
+            Explorando o mundo um hostel por vez - Uma crônica das minhas aventuras e experiências trabalhando em hostels ao redor do globo.
           </p>
         </div>
 
