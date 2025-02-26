@@ -14,10 +14,10 @@ function Footer() {
             <Icons.logo className="h-6 w-6 text-primary" />
           </div>
           <nav className="mb-8 flex flex-wrap justify-center gap-6">
-            <a href="#home" className="text-gray-600 hover:text-primary">Home</a>
-            <a href="#about" className="text-gray-600 hover:text-primary">About</a>
-            <a href="#destinations" className="text-gray-600 hover:text-primary">Destinations</a>
-            <a href="#contact" className="text-gray-600 hover:text-primary">Contact</a>
+            <a href="#home" className="text-gray-600 hover:text-primary">Início</a>
+            <a href="#about" className="text-gray-600 hover:text-primary">Sobre</a>
+            <a href="#destinations" className="text-gray-600 hover:text-primary">Destinos</a>
+            <a href="#contact" className="text-gray-600 hover:text-primary">Contato</a>
           </nav>
           <div className="mb-8 flex space-x-4">
             <Button variant="outline" size="icon" className="rounded-full">
@@ -43,19 +43,19 @@ function Footer() {
                 <Label htmlFor="email" className="sr-only">Email</Label>
                 <Input 
                   id="email" 
-                  placeholder="Enter your email" 
+                  placeholder="Digite seu email" 
                   type="email" 
                   className="rounded-full" 
                 />
               </div>
               <Button type="submit" className="rounded-full bg-primary hover:bg-primary-dark">
-                Subscribe
+                Inscrever-se
               </Button>
             </form>
           </div>
           <div className="text-center">
             <p className="text-sm text-gray-500">
-              © 2024 TravelHostels. All rights reserved.
+              © 2024 TravelHostels. Todos os direitos reservados.
             </p>
           </div>
         </div>

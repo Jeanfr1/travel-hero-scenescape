@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 const VideoHero = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
       <video
         autoPlay
         loop
@@ -18,27 +17,25 @@ const VideoHero = () => {
         />
       </video>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* Content */}
       <div className="relative h-full flex items-center justify-center text-center px-4">
         <div className="max-w-4xl animate-fade-up">
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-white uppercase bg-primary/80 rounded-full">
-            Discover the World
+            Descubra o Mundo
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Your Journey Begins With Us
+            Sua Jornada Começa Conosco
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Experience breathtaking destinations and create unforgettable memories with our curated travel experiences.
+            Experimente destinos deslumbrantes e crie memórias inesquecíveis com nossas experiências de viagem selecionadas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-primary hover:bg-primary-dark text-white px-8 py-6 text-lg">
-              Explore Destinations
+              Explorar Destinos
             </Button>
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-navbg px-8 py-6 text-lg">
-              View Our Tours
+              Ver Nossos Passeios
             </Button>
           </div>
         </div>

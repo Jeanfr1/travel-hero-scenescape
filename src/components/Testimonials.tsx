@@ -1,23 +1,24 @@
+
 import { useState } from "react";
 import { TestimonialCard } from "@/components/ui/testimonial-cards";
 
 const testimonials = [
   {
     id: 1,
-    testimonial: "The hostels are amazing! The staff was incredibly friendly and helpful. I felt at home right away.",
-    author: "Sarah M. - Digital Nomad",
+    testimonial: "Os hostels são incríveis! A equipe foi extremamente amigável e prestativa. Me senti em casa imediatamente.",
+    author: "Sarah M. - Nômade Digital",
     image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
   },
   {
     id: 2,
-    testimonial: "Best hostel experience ever! The community events and atmosphere were extraordinary.", 
-    author: "James L. - Travel Blogger",
+    testimonial: "Melhor experiência em hostel! Os eventos comunitários e a atmosfera foram extraordinários.", 
+    author: "James L. - Blogueiro de Viagem",
     image: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
   },
   {
     id: 3,
-    testimonial: "Clean, comfortable, and filled with great people. I extended my stay twice because I loved it so much!",
-    author: "Maria G. - Solo Traveler",
+    testimonial: "Limpo, confortável e cheio de pessoas incríveis. Prolonguei minha estadia duas vezes porque amei tanto!",
+    author: "Maria G. - Viajante Solo",
     image: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
   }
 ];
@@ -36,10 +37,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 animate-fade-up">
-            What Our Guests Say
+            O Que Nossos Hóspedes Dizem
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto animate-fade-up">
-            Read about the experiences of travelers who have stayed at our hostels around the world.
+            Leia sobre as experiências de viajantes que se hospedaram em nossos hostels ao redor do mundo.
           </p>
         </div>
         

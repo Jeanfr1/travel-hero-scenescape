@@ -6,23 +6,23 @@ const WhyChooseUs = () => {
   const features = [
     {
       icon: <Trophy className="w-10 h-10 text-primary" />,
-      title: "Expert Guidance",
-      description: "Our experienced travel experts craft perfect itineraries tailored to your preferences.",
+      title: "Orientação Especializada",
+      description: "Nossos especialistas em viagens criam roteiros perfeitos adaptados às suas preferências.",
     },
     {
       icon: <Compass className="w-10 h-10 text-primary" />,
-      title: "Unique Destinations",
-      description: "Discover hidden gems and extraordinary locations off the beaten path.",
+      title: "Destinos Únicos",
+      description: "Descubra joias escondidas e locais extraordinários fora do caminho comum.",
     },
     {
       icon: <Heart className="w-10 h-10 text-primary" />,
-      title: "Personalized Experience",
-      description: "Every journey is customized to create your perfect travel story.",
+      title: "Experiência Personalizada",
+      description: "Cada jornada é personalizada para criar sua história de viagem perfeita.",
     },
     {
       icon: <Shield className="w-10 h-10 text-primary" />,
-      title: "Safe Travel Promise",
-      description: "Your safety and comfort are our top priorities throughout your journey.",
+      title: "Compromisso com Segurança",
+      description: "Sua segurança e conforto são nossas principais prioridades durante toda a viagem.",
     },
   ];
 
@@ -31,10 +31,10 @@ const WhyChooseUs = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-up">
-            Why Choose Us
+            Por Que Nos Escolher
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto animate-fade-up">
-            Experience the difference with our premium travel services designed to make your journey unforgettable.
+            Experimente a diferença com nossos serviços premium de viagem projetados para tornar sua jornada inesquecível.
           </p>
         </div>
         

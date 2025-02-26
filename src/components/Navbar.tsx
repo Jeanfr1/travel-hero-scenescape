@@ -4,10 +4,10 @@ import { Button } from './ui/button';
 import { NavBar } from './ui/tubelight-navbar';
 
 const navItems = [
-  { name: 'Home', url: '#home', icon: Home },
-  { name: 'About', url: '#about', icon: User },
-  { name: 'Destinations', url: '#destinations', icon: MapPin },
-  { name: 'Contact', url: '#contact', icon: Phone }
+  { name: 'Início', url: '#home', icon: Home },
+  { name: 'Sobre', url: '#about', icon: User },
+  { name: 'Destinos', url: '#destinations', icon: MapPin },
+  { name: 'Contato', url: '#contact', icon: Phone }
 ];
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
       <NavBar items={navItems} />
       <div className="fixed top-4 right-4 z-50">
         <Button className="bg-primary hover:bg-primary-dark text-white">
-          Book Now
+          Reserve Agora
         </Button>
       </div>
     </div>
