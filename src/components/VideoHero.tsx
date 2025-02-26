@@ -1,4 +1,6 @@
 
+import { Button } from '@/components/ui/button';
+
 const VideoHero = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
