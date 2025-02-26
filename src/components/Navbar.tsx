@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { NavBar } from './ui/tubelight-navbar';
 
 const navItems = [
-  { name: 'Início', url: '#home', icon: Home },
+  { name: 'Início', url: '#', icon: Home },
   { name: 'Sobre', url: '#about', icon: User },
   { name: 'Destinos', url: '#destinations', icon: MapPin },
   { name: 'Contato', url: '#contact', icon: Phone }
@@ -13,12 +13,19 @@ const navItems = [
 const Navbar = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    const element = document.querySelector(targetId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
+    if (targetId === '#') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
+    } else {
+      const element = document.querySelector(targetId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
     }
   };
 
