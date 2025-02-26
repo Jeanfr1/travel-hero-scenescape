@@ -31,8 +31,17 @@ const Navbar = () => {
         }))} 
       />
       <div className="fixed top-4 right-4 z-50">
-        <Button className="bg-primary hover:bg-primary-dark text-white">
-          Reserve Agora
+        <Button 
+          className="bg-primary hover:bg-primary-dark text-white"
+          asChild
+        >
+          <a 
+            href="https://wa.link/wzdjjk" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Reserve Agora
+          </a>
         </Button>
       </div>
     </div>
