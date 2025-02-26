@@ -30,13 +30,13 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-slate-900 py-24">
+    <section className="bg-white py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white animate-fade-up">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 animate-fade-up">
             What Our Guests Say
           </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto animate-fade-up">
+          <p className="text-gray-600 max-w-2xl mx-auto animate-fade-up">
             Read about the experiences of travelers who have stayed at our hostels around the world.
           </p>
         </div>
@@ -59,3 +59,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+

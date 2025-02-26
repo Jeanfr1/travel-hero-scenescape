@@ -34,27 +34,28 @@ export function TestimonialCard({ handleShuffle, testimonial, position, id, auth
         right: 0,
         bottom: 0
       }}
-      onDragStart={(e) => {
-        dragRef.current = e.clientX;
+      onDragStart={(e: any) => {
+        dragRef.current = e.clientX ?? e.touches?.[0]?.clientX ?? 0;
       }}
-      onDragEnd={(e) => {
-        if (dragRef.current - e.clientX > 150) {
+      onDragEnd={(e: any) => {
+        const endX = e.clientX ?? e.touches?.[0]?.clientX ?? 0;
+        if (dragRef.current - endX > 150) {
           handleShuffle();
         }
         dragRef.current = 0;
       }}
       transition={{ duration: 0.35 }}
-      className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-slate-700 bg-slate-800/20 p-6 shadow-xl backdrop-blur-md ${
+      className={`absolute left-0 top-0 grid h-[450px] w-[350px] select-none place-content-center space-y-6 rounded-2xl border-2 border-gray-200 bg-white p-6 shadow-xl ${
         isFront ? "cursor-grab active:cursor-grabbing" : ""
       }`}
     >
       <img
         src={`https://i.pravatar.cc/128?img=${id}`}
         alt={`Avatar of ${author}`}
-        className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-slate-700 bg-slate-200 object-cover"
+        className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-gray-200 bg-gray-100 object-cover"
       />
-      <span className="text-center text-lg italic text-slate-400">"{testimonial}"</span>
-      <span className="text-center text-sm font-medium text-indigo-400">{author}</span>
+      <span className="text-center text-lg italic text-gray-600">"{testimonial}"</span>
+      <span className="text-center text-sm font-medium text-primary">{author}</span>
     </motion.div>
   );
 }
