@@ -1,0 +1,271 @@
+/* Custom Styles for Travel Hero Scenescape */
+
+/* Custom Color Scheme */
+:root {
+  /* Primary Colors */
+  --primary-50: #f0f1f3;
+  --primary-100: #e1e3e7;
+  --primary-200: #c3c7cf;
+  --primary-300: #a5abb7;
+  --primary-400: #8E9196; /* Original primary */
+  --primary-500: #6B6E72; /* Original primary-dark */
+  --primary-600: #555759;
+  --primary-700: #3f4042;
+  --primary-800: #2a2a2c;
+  --primary-900: #151516;
+
+  /* Accent Colors - Teal */
+  --accent-50: #edfafa;
+  --accent-100: #d5f5f6;
+  --accent-200: #aaeaed;
+  --accent-300: #7fdfde;
+  --accent-400: #54d4d2;
+  --accent-500: #38b2b0;
+  --accent-600: #2a8f8d;
+  --accent-700: #1f6c6a;
+  --accent-800: #154948;
+  --accent-900: #0a2524;
+
+  /* Accent Colors - Gold */
+  --gold-50: #fdf9e7;
+  --gold-100: #fbf3cf;
+  --gold-200: #f7e79f;
+  --gold-300: #f3db6f;
+  --gold-400: #efcf3f;
+  --gold-500: #e6b91f;
+  --gold-600: #c99419;
+  --gold-700: #9c7013;
+  --gold-800: #6f4c0d;
+  --gold-900: #422807;
+
+  /* Background Colors */
+  --bg-light: #f8f9fa;
+  --bg-dark: #221F26; /* Original navbg */
+
+  /* Gradient Colors */
+  --gradient-start: var(--primary-400);
+  --gradient-end: var(--primary-600);
+  --gradient-accent: var(--accent-500);
+  --gradient-gold: var(--gold-400);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  /* Glow Effects */
+  --glow-primary: 0 0 15px rgba(142, 145, 150, 0.5);
+  --glow-accent: 0 0 15px rgba(84, 212, 210, 0.5);
+  --glow-gold: 0 0 15px rgba(239, 207, 63, 0.5);
+}
+
+/* Custom Gradients */
+.gradient-primary {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-accent));
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-gold));
+}
+
+.gradient-mesh {
+  background: radial-gradient(circle at 0% 0%, var(--primary-300) 0%, transparent 50%),
+              radial-gradient(circle at 100% 0%, var(--accent-400) 0%, transparent 50%),
+              radial-gradient(circle at 100% 100%, var(--primary-500) 0%, transparent 50%),
+              radial-gradient(circle at 0% 100%, var(--gold-400) 0%, transparent 50%);
+}
+
+.gradient-text-primary {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, var(--primary-400), var(--primary-600));
+}
+
+.gradient-text-accent {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, var(--accent-400), var(--accent-600));
+}
+
+.gradient-text-gold {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, var(--gold-400), var(--gold-600));
+}
+
+/* Custom Shadows */
+.shadow-glow-primary {
+  box-shadow: var(--glow-primary);
+}
+
+.shadow-glow-accent {
+  box-shadow: var(--glow-accent);
+}
+
+.shadow-glow-gold {
+  box-shadow: var(--glow-gold);
+}
+
+/* Custom Borders */
+.border-gradient-primary {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+}
+
+.border-gradient-accent {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, var(--gradient-start), var(--gradient-accent));
+}
+
+.border-gradient-gold {
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(135deg, var(--gradient-start), var(--gradient-gold));
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-100);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-400);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-500);
+}
+
+/* Text Highlight */
+::selection {
+  background-color: var(--accent-400);
+  color: white;
+}
+
+/* Custom Utilities */
+.text-highlight {
+  color: var(--accent-500);
+  font-weight: 600;
+}
+
+.text-gold {
+  color: var(--gold-500);
+}
+
+.bg-mesh {
+  background-color: var(--bg-light);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(142, 145, 150, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(84, 212, 210, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(107, 110, 114, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(239, 207, 63, 0.1) 0px, transparent 50%);
+}
+
+/* Custom Button Styles */
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(45deg,
+    var(--primary-400),
+    var(--accent-400),
+    var(--gold-400),
+    var(--primary-400));
+  background-size: 400% 400%;
+  animation: gradientFlow 5s ease infinite;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-glow:hover::before {
+  opacity: 1;
+}
+
+/* Custom Card Styles */
+.card-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+}
+
+.card-glass-dark {
+  background: rgba(34, 31, 38, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+}
+
+/* Custom Image Styles */
+.img-glow {
+  filter: drop-shadow(0 0 8px rgba(142, 145, 150, 0.3));
+  transition: filter 0.3s ease;
+}
+
+.img-glow:hover {
+  filter: drop-shadow(0 0 12px rgba(142, 145, 150, 0.5));
+}
+
+/* Custom Section Styles */
+.section-divider {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to bottom right, transparent 49.5%, var(--primary-400) 50%);
+}
+
+.section-divider-reverse {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+.section-divider-reverse::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to bottom left, transparent 49.5%, var(--primary-400) 50%);
+}

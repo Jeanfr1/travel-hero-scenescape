@@ -5,7 +5,6 @@ import WhyChooseUs from '@/components/WhyChooseUs';
 import ParallaxGallery from '@/components/ParallaxGallery';
 import JourneyTimeline from '@/components/JourneyTimeline';
 import Testimonials from '@/components/Testimonials';
-import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -17,7 +16,6 @@ const Index = () => {
       <ParallaxGallery />
       <JourneyTimeline />
       <Testimonials />
-      <ContactForm />
       <Footer />
     </main>
   );

@@ -1,69 +1,156 @@
-# Welcome to your Lovable project
+<div align="center">
+  <h1>✈️ Travel Hero SceneScape</h1>
+  <p><strong>Uma experiência imersiva de viagem com animações fluidas e design moderno</strong></p>
+</div>
 
-## Project info
+> **Nota:** Para adicionar uma imagem de banner ao README, capture uma screenshot da seção hero do site e salve-a como `public/images/readme-banner.png`. Depois, descomente a linha de imagem abaixo:
+>
+> `<!-- <img src="public/images/readme-banner.png" alt="Travel Hero SceneScape" width="800"/> -->`
 
-**URL**: https://lovable.dev/projects/26e68343-97ec-4636-96aa-daa43fffa6ad
+<div align="center">
 
-## How can I edit this code?
+  ![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+  ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+  ![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+  ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+  ![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.x-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-There are several ways of editing your application.
+</div>
 
-**Use Lovable**
+## 🌟 Visão Geral
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/26e68343-97ec-4636-96aa-daa43fffa6ad) and start prompting.
+Travel Hero SceneScape é um site moderno de agência de viagens que combina design elegante com animações fluidas para criar uma experiência de usuário imersiva. Desenvolvido com as mais recentes tecnologias web, o projeto demonstra implementações avançadas de React, TypeScript e animações interativas.
 
-Changes made via Lovable will be committed automatically to this repo.
+<div align="center">
+  <!-- Adicione uma screenshot do seu site aqui -->
+  <p><em>Capture uma screenshot da página "Guias e Recursos" ou outra seção interessante do site e salve como "public/images/readme-showcase.png"</em></p>
+</div>
 
-**Use your preferred IDE**
+## ✨ Características
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- 🎨 **Design Responsivo e Moderno** - Layout adaptável a qualquer dispositivo com estética contemporânea
+- 🌊 **Animações Fluidas** - Transições suaves e efeitos visuais usando Framer Motion
+- 🧩 **Componentes Reutilizáveis** - Arquitetura modular com componentes bem estruturados
+- 🔍 **SEO Otimizado** - Estrutura semântica para melhor indexação
+- 🌐 **Internacionalização** - Suporte para conteúdo em português
+- 🔄 **Navegação Intuitiva** - Experiência de usuário fluida com React Router
+- 🎭 **Efeitos Interativos** - Elementos interativos como cards com efeito tilt e botões magnéticos
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Stack Tecnológico
 
-Follow these steps:
+### Frontend
+- **React 18** - Biblioteca JavaScript para construção de interfaces
+- **TypeScript** - Superset tipado de JavaScript
+- **Vite** - Build tool e dev server ultrarrápido
+- **React Router** - Navegação declarativa para aplicações React
+- **Framer Motion** - Biblioteca de animações para React
+- **Tailwind CSS** - Framework CSS utilitário
+- **Shadcn UI** - Componentes de UI reutilizáveis e acessíveis
+- **Lucide Icons** - Conjunto de ícones SVG
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Ferramentas de Desenvolvimento
+- **ESLint** - Linting para JavaScript/TypeScript
+- **PostCSS** - Processador CSS com plugins
+- **Bun** - Runtime JavaScript e gerenciador de pacotes
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Recursos Avançados Implementados
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Hooks Personalizados
+- `useMagnetic` - Efeito magnético para elementos interativos
+- `useScrollAnimation` - Animações baseadas na posição de scroll
+- `useMobile` - Detecção responsiva para experiências otimizadas em dispositivos móveis
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Componentes de UI Avançados
+- **Particles** - Sistema de partículas para fundos dinâmicos
+- **TiltCard** - Cards com efeito 3D de inclinação
+- **AnimatedText** - Texto com animações de entrada personalizáveis
+- **VideoHero** - Hero section com vídeo de fundo e overlay de gradiente
+
+### Técnicas de Animação
+- Animações de entrada staggered (escalonadas)
+- Transições de página fluidas
+- Efeitos parallax em galerias de imagens
+- Animações baseadas em scroll
+- Efeitos de hover avançados
+
+## 📁 Estrutura do Projeto
+
+```
+travel-hero-scenescape/
+├── public/               # Arquivos estáticos
+│   ├── images/           # Imagens do site
+│   └── favicon.svg       # Favicon
+├── src/
+│   ├── components/       # Componentes React
+│   │   ├── ui/           # Componentes de UI reutilizáveis
+│   │   └── ...           # Componentes específicos da aplicação
+│   ├── hooks/            # Hooks personalizados
+│   ├── lib/              # Utilitários e constantes
+│   ├── pages/            # Componentes de página
+│   ├── styles/           # Estilos CSS
+│   ├── App.tsx           # Componente principal
+│   └── main.tsx          # Ponto de entrada
+├── index.html            # Template HTML
+├── tailwind.config.ts    # Configuração do Tailwind
+└── package.json          # Dependências e scripts
 ```
 
-**Edit a file directly in GitHub**
+## 🖥️ Páginas Principais
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Início** - Landing page com hero section em vídeo e destaques
+- **Sobre** - História e valores da agência
+- **Destinos** - Catálogo de destinos com cards interativos
+- **Guias e Recursos** - Dicas de viagem e recursos úteis
+- **Contato** - Formulário de contato e informações
 
-**Use GitHub Codespaces**
+## 🧠 Padrões e Práticas
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Atomic Design** - Estrutura de componentes baseada em princípios de design atômico
+- **CSS-in-JS** - Estilização dinâmica com Tailwind e classes condicionais
+- **Lazy Loading** - Carregamento otimizado de imagens e componentes
+- **Composição de Componentes** - Padrões avançados de composição React
+- **Renderização Condicional** - UI adaptativa baseada em estado e contexto
 
-## What technologies are used for this project?
+## 📸 Capturas de Tela
 
-This project is built with .
+Para adicionar mais capturas de tela do seu projeto:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Capture imagens impressionantes do seu site
+2. Salve-as em `public/images/`
+3. Adicione-as a este README usando a sintaxe:
 
-## How can I deploy this project?
+```md
+<div align="center">
+  <img src="public/images/sua-imagem.png" alt="Descrição" width="800"/>
+</div>
+```
 
-Simply open [Lovable](https://lovable.dev/projects/26e68343-97ec-4636-96aa-daa43fffa6ad) and click on Share -> Publish.
+## 🚀 Como Executar
 
-## I want to use a custom domain - is that possible?
+```bash
+# Instalar dependências
+npm install
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+# Iniciar servidor de desenvolvimento
+npm run dev
+
+# Construir para produção
+npm run build
+
+# Visualizar build de produção
+npm run preview
+```
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+<div align="center">
+  <p>Desenvolvido com ❤️ por Travel Hero Team</p>
+</div>
