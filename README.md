@@ -137,6 +137,46 @@ npm run build
 npm run preview
 ```
 
+## 🌐 Deploy no Netlify
+
+Este projeto está configurado para ser facilmente implantado no Netlify. Siga um dos métodos abaixo:
+
+### Método 1: Usando o Script de Deploy
+
+```bash
+# Torne o script executável (se ainda não estiver)
+chmod +x deploy-to-netlify.sh
+
+# Execute o script de deploy
+./deploy-to-netlify.sh
+```
+
+### Método 2: Deploy Manual via Netlify UI
+
+1. Construa o projeto localmente:
+   ```bash
+   npm run build
+   ```
+
+2. Vá para [Netlify Drop](https://app.netlify.com/drop)
+3. Arraste e solte a pasta `dist` na interface
+
+### Método 3: Integração Contínua com GitHub
+
+1. Faça push do seu código para o GitHub
+2. No [Netlify](https://app.netlify.com/):
+   - Clique em "New site from Git"
+   - Selecione seu repositório
+   - Configure as seguintes opções:
+     - Build command: `npm run build`
+     - Publish directory: `dist`
+   - Clique em "Deploy site"
+
+O site inclui as seguintes configurações para o Netlify:
+- `netlify.toml` com configurações de build e redirecionamentos
+- Arquivo `_redirects` para suporte a rotas SPA
+- Configurações de cache para recursos estáticos
+
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
