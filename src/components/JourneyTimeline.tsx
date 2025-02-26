@@ -1,231 +1,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-
-const journeyData = [
-  {
-    title: "2025",
-    content: (
-      <div>
-        <h4 className="text-xl font-semibold mb-2 text-primary">Füssen, Alemanha</h4>
-        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-          Guia Turístico & Recepção | Janeiro 2025 - 1 mês
-        </p>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="https://images.unsplash.com/photo-1534313314376-a72289b6181e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Neuschwanstein Castle"
-            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Füssen Town"
-            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-          />
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "2024",
-    content: (
-      <div className="space-y-8">
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Lisboa, Portugal</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Recepção | Outubro 2024 - 1 mês
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1513735492246-483525079686?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Lisbon Streets"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1585208798174-6cedd86e019a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Lisbon Tram"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Florianópolis, Brasil</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Marketing & Auxiliar de Cozinha | Fevereiro 2024 - 3 meses
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1625433669678-99c6bf547f65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Florianópolis Beach"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1617974623767-da3b7e888041?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Florianópolis City"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "2023",
-    content: (
-      <div className="space-y-8">
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">La Paz, Bolívia</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Recepção | Dezembro 2023 - 2 semanas
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1559604185-f46689c0f834?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="La Paz City"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1531993584963-854d3d2d6b30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="La Paz Mountains"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Cusco, Peru</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Bartender | Outubro 2023 - 1 mês
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Cusco Plaza"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Machu Picchu"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Máncora, Peru</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Promotor de Eventos | Setembro 2023 - 3 semanas
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1603649293417-89e0504286cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Mancora Beach"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1597904606214-0d9033890b92?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Mancora Sunset"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Lima, Peru</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Marketing & Promotor de Eventos | Agosto 2023 - 1 mês
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1531968455001-5c5272a41129?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Lima City"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1577587230708-187fdbef4d91?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Lima Coast"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Cartagena, Colômbia</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Serviços Gerais & Recepção | Maio 2023 - 1 mês
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1583531352515-8884af319dc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Cartagena Streets"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1626897843877-8b4fcd211994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Cartagena Beach"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Santa Marta, Colômbia</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Auxiliar de Café da Manhã | Abril 2023 - 1 mês
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1586094285164-3577206a9c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Santa Marta Beach"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1596436889106-be35e843f974?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Santa Marta Town"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-2 text-primary">Bogotá, Colômbia</h4>
-          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-            Recepção | Fevereiro 2023 - 2 meses
-          </p>
-          <div className="grid grid-cols-2 gap-4">
-            <img
-              src="https://images.unsplash.com/photo-1628082878598-ed6a5d03c57b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Bogota City"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1630364227876-978c8586ee5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-              alt="Bogota Streets"
-              className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-            />
-          </div>
-        </div>
-      </div>
-    ),
-  },
-  {
-    title: "2022",
-    content: (
-      <div>
-        <h4 className="text-xl font-semibold mb-2 text-primary">Curitiba, Brasil</h4>
-        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
-          Recepção, Mídias Sociais & Promotor de Eventos | Maio 2022 - 1 mês
-        </p>
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src="https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Curitiba City"
-            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1624316651062-cc6c30d670cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            alt="Curitiba Gardens"
-            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
-          />
-        </div>
-      </div>
-    ),
-  },
-];
+import { journeyData } from "@/lib/constants/journey-images";
 
 const JourneyTimeline = ({ className }: { className?: string }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -259,30 +35,45 @@ const JourneyTimeline = ({ className }: { className?: string }) => {
           </p>
         </div>
 
-        <div
-          className={cn("w-full bg-white font-sans md:px-10 relative", className)}
-          ref={containerRef}
-        >
+        <div className={cn("w-full bg-white font-sans md:px-10 relative", className)} ref={containerRef}>
           <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
-            {journeyData.map((item, index) => (
-              <div
-                key={index}
-                className="flex justify-start pt-10 md:pt-40 md:gap-10"
-              >
+            {journeyData.map((yearData, index) => (
+              <div key={index} className="flex justify-start pt-10 md:pt-40 md:gap-10">
                 <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
                   <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white flex items-center justify-center">
                     <div className="h-4 w-4 rounded-full bg-primary border border-primary/30 p-2" />
                   </div>
                   <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-primary/70">
-                    {item.title}
+                    {yearData.year}
                   </h3>
                 </div>
 
                 <div className="relative pl-20 pr-4 md:pl-4 w-full">
                   <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-primary/70">
-                    {item.title}
+                    {yearData.year}
                   </h3>
-                  {item.content}
+                  <div className="space-y-8">
+                    {yearData.locations.map((location, locIndex) => (
+                      <div key={locIndex}>
+                        <h4 className="text-xl font-semibold mb-2 text-primary">{location.title}</h4>
+                        <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base mb-4">
+                          {location.role} | {location.period}
+                        </p>
+                        <div className="grid grid-cols-2 gap-4">
+                          <img
+                            src={location.images.first}
+                            alt={`${location.title} - imagem 1`}
+                            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+                          />
+                          <img
+                            src={location.images.second}
+                            alt={`${location.title} - imagem 2`}
+                            className="rounded-lg object-cover h-44 w-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
