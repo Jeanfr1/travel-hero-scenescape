@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { TestimonialCard } from "@/components/ui/testimonial-cards";
 
@@ -6,17 +5,20 @@ const testimonials = [
   {
     id: 1,
     testimonial: "The hostels are amazing! The staff was incredibly friendly and helpful. I felt at home right away.",
-    author: "Sarah M. - Digital Nomad"
+    author: "Sarah M. - Digital Nomad",
+    image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
   },
   {
     id: 2,
     testimonial: "Best hostel experience ever! The community events and atmosphere were extraordinary.", 
-    author: "James L. - Travel Blogger"
+    author: "James L. - Travel Blogger",
+    image: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
   },
   {
     id: 3,
     testimonial: "Clean, comfortable, and filled with great people. I extended my stay twice because I loved it so much!",
-    author: "Maria G. - Solo Traveler"
+    author: "Maria G. - Solo Traveler",
+    image: "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
   }
 ];
 
@@ -59,4 +61,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-

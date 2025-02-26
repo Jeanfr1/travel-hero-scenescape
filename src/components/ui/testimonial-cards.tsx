@@ -10,9 +10,10 @@ interface TestimonialCardProps {
   position: "front" | "middle" | "back";
   id: number;
   author: string;
+  image: string;
 }
 
-export function TestimonialCard({ handleShuffle, testimonial, position, id, author }: TestimonialCardProps) {
+export function TestimonialCard({ handleShuffle, testimonial, position, image, author }: TestimonialCardProps) {
   const dragRef = React.useRef(0);
   const isFront = position === "front";
 
@@ -50,8 +51,8 @@ export function TestimonialCard({ handleShuffle, testimonial, position, id, auth
       }`}
     >
       <img
-        src={`https://i.pravatar.cc/128?img=${id}`}
-        alt={`Avatar of ${author}`}
+        src={image}
+        alt={`Photo of ${author}`}
         className="pointer-events-none mx-auto h-32 w-32 rounded-full border-2 border-gray-200 bg-gray-100 object-cover"
       />
       <span className="text-center text-lg italic text-gray-600">"{testimonial}"</span>
