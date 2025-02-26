@@ -1,6 +1,7 @@
 
 import Navbar from '@/components/Navbar';
 import VideoHero from '@/components/VideoHero';
+import WhyChooseUs from '@/components/WhyChooseUs';
 import { Button } from '@/components/ui/button';
 
 const Index = () => {
@@ -8,6 +9,7 @@ const Index = () => {
     <main className="min-h-screen">
       <Navbar />
       <VideoHero />
+      <WhyChooseUs />
     </main>
   );
 };
