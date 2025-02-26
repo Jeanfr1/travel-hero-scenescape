@@ -4,6 +4,7 @@ import VideoHero from '@/components/VideoHero';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import ParallaxGallery from '@/components/ParallaxGallery';
 import JourneyTimeline from '@/components/JourneyTimeline';
+import Testimonials from '@/components/Testimonials';
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <WhyChooseUs />
       <ParallaxGallery />
       <JourneyTimeline />
+      <Testimonials />
     </main>
   );
 };
